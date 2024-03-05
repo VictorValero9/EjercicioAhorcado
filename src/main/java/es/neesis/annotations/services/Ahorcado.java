@@ -46,9 +46,9 @@ public class Ahorcado implements IAhorcado {
         int currentAttempts = 0;
 
         while (currentAttempts < MAX_ATTEMPTS){
-            int remainingAttempts = MAX_ATTEMPTS - currentAttempts;
+
             System.out.println("Palabra actual: " + String.valueOf(wordState));
-            System.out.println("Intentos restantes: " + remainingAttempts);
+            System.out.println("Intentos restantes: " + currentAttempts);
             char letter = selectLetter();
 
             if (randomWord.indexOf(letter) != -1){
