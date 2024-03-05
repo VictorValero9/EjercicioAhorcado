@@ -1,18 +1,18 @@
 package es.neesis.annotations.applications;
 
-import es.neesis.annotations.services.IMailService;
 import org.springframework.stereotype.Component;
+import es.neesis.annotations.services.IAhorcado;
 
 @Component
 public class ConstructorApplication {
 
-        private final IMailService mailService;
+        private final IAhorcado ahorcado;
 
-        public ConstructorApplication(IMailService mailService) {
-            this.mailService = mailService;
+        public ConstructorApplication(IAhorcado ahorcado) {
+            this.ahorcado = ahorcado;
         }
 
-        public void sendMail(String to, String subject, String body) {
-            mailService.sendMail(to, subject, body);
+        public void menu() {
+            ahorcado.menu();
         }
 }
