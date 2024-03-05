@@ -27,14 +27,16 @@ public class Ahorcado implements IAhorcado {
         System.out.println("Fin del Juego");
     }
 
-    private int selectOptionMenu() {
+    @Override
+    public int selectOptionMenu() {
         Scanner input = new Scanner(System.in);
         int option = input.nextInt();
         input.nextLine();
         return option;
     }
 
-    private void game() {
+    @Override
+    public void game() {
         Random randomizer = new Random();
         String randomWord = WORDS_LIST.get(randomizer.nextInt(WORDS_LIST.size()));
         char[] wordState = new char[randomWord.length()];
@@ -65,12 +67,14 @@ public class Ahorcado implements IAhorcado {
         }
     }
 
-    private void displayGameState(char[] wordState, int currentAttempts) {
+    @Override
+    public void displayGameState(char[] wordState, int currentAttempts) {
         System.out.println("Palabra actual: " + String.valueOf(wordState));
         System.out.println("Intentos restantes: " + currentAttempts);
     }
 
-    private char selectLetter() {
+    @Override
+    public char selectLetter() {
         Scanner input = new Scanner(System.in);
         String letter = input.nextLine().toUpperCase();
         return letter.charAt(0);

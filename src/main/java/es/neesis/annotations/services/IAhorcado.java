@@ -1,5 +1,9 @@
 package es.neesis.annotations.services;
 
 public interface IAhorcado {
-    public void menu();
+     void menu();
+     int selectOptionMenu();
+     void game();
+     void displayGameState(char[] wordState, int currentAttempts);
+     char selectLetter();
 }
